@@ -1,17 +1,12 @@
 #!/bin/bash
 
 # navigate to app folder
-cd /home/app/
+cd /home/ec2-user/app/
 
 # install node and npm
-yum install curl -y
-curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo -E bash -
-yum install nodejs -y
-yum install npm -y
-
-# install nginx and allow HTTP traffic
-yum install nginx -y
-systemctl start nginx
-systemctl enable nginx
-firewall-cmd --permanent --add-service=http
-firewall-cmd --reload
+apt-get install curl
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+apt-get install nodejs -y
+apt-get install npm -y
+apt install nginx -y
+ufw allow 'Nginx HTTP'
