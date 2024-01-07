@@ -1,24 +1,17 @@
 import React, { FC } from 'react'
-import bgVideo from '../../assets/videos/videdo.mp4'
+import { TypeAnimation } from 'react-type-animation';
+
 import ceLogo from '../../assets/icons/connect-english-blue-pink-logo.png'
 import globImage from '../../assets/bg/Group 162.png'
 import SocialMedia from './SocialMedia'
-type Props = {}
+type Props = object
 
 const Hero: FC<Props> = () => {
+
     return (
-        <div className='h-screen'>
+        <div className='md:h-screen'>
             <div 
-                className='
-                    absolute 
-                    top-0 
-                    left-0 
-                    hidden 
-                    w-full 
-                    h-full 
-                    md:block 
-                    bg-ce-blue 
-                    opacity-70'></div>
+                className='absolute top-0 left-0 hidden w-full h-full md:block bg-ce-blue opacity-70'></div>
             <video 
                 className='
                     w-full 
@@ -26,7 +19,7 @@ const Hero: FC<Props> = () => {
                     md:block 
                     object-cover 
                     h-[100vh]' 
-                    src={bgVideo} autoPlay loop muted />
+                    src='https://res.cloudinary.com/dzg8clhcy/video/upload/v1704562539/website/videdo_ondts3.mp4' autoPlay loop muted />
             <div 
                 className='
                     md:w-[70%] 
@@ -39,7 +32,7 @@ const Hero: FC<Props> = () => {
                     md:rounded-br-[80%] 
                     p-5
                     md:p-10 
-                    md:pl-32'
+                    lg:pl-32'
             >
                 <div className='absolute w-full'>
 
@@ -57,24 +50,34 @@ const Hero: FC<Props> = () => {
                         w-full 
                         h-full 
                         items-center 
-                        mt:[100px]
+                        mt-[100px]
                         md:mt-40'>
                     <div 
-                        className='
-                            flex 
-                            justify-center 
-                            w-full 
-                            mt-10 
-                            md:20 
-                            md:justify-start 
-                            mt'
+                        className='flex justify-center w-full mt-10 md:20 md:justify-start mt'
                     >
                         <img className='w-[150px]' src={ceLogo} alt="" />
                     </div>
-                    <div className='mt-10'>
-                        <p className='text-5xl font-bold text-ce-blue'>
+                    <div className='h-20 mt-10 text-3xl font-bold md:h-32 text-ce-blue md:text-5xl'>
+                        <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed once, initially
+                                'We teach English for beginners',
+                                1000,
+                                'We teach English for intermediate learners' ,
+                                1000,
+                                'We teach English for advanced students',
+                                1000,
+                                'We dive into English for academic success',
+                                1000,
+                            ]}
+                            speed={50}
+                            style={{  }}
+                            repeat={Infinity}
+                        />
+
+                        {/* <p className='text-5xl font-bold text-ce-blue'>
                             What is Lorem Ipsum?
-                        </p>
+                        </p> */}
                     </div>
                     <div className='md:w-[70%] w-full mt-10 text-ce-blue font-semibold'>
                         <p >
@@ -85,13 +88,15 @@ const Hero: FC<Props> = () => {
                             but also the leap into electronic typesetting, remaining essentially unchanged.
                         </p>
                     </div>
-                    <div className='mt-10'>
+                    <div className='mt-10 lg:hidden'>
                         <SocialMedia />
                     </div>
                 </div>
                 {/* <div className='pt-5 md:w-[50%] w-full z-10'>
                     <FormHero />
                 </div> */}
+               
+                
 
             </div>
         </div>

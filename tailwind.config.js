@@ -8,6 +8,7 @@ export default {
         "ce-pink": "#FF107D",
         "ce-white": "#ffffff",
         "ce-gray": "#919191",
+        "ce-light-gray": "#E9E9E9"
       },
     },
   },
