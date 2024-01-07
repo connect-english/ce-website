@@ -1,18 +1,24 @@
-version: 0.0
-os: linux
-files:
-  - source: /
-    destination: /home/ec2-user/react-app
-hooks:
-  ApplicationStop:
-    - location: scripts/stop.sh
-      timeout: 300
-      runas: ec2-user
-  BeforeInstall:
-    - location: scripts/install.sh
-      timeout: 300
-      runas: ec2-user
-  ApplicationStart:
-    - location: scripts/start.sh
-      timeout: 300
-      runas: ec2-user
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+   
+    commands:
+        # install npm
+        - npm install
+       
+  build:
+    commands:
+        # run build script
+        - npm run build
+     
+artifacts:
+  # include all files required to run the application
+  files:
+    - public/**/*
+    - src/**/*
+    - package.json
+    - appspec.yml
+    - scripts/**/*
