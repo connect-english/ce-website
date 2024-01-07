@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # navigate to app folder
-cd /app
+cd /home/ec2-user/app/
 
 # install dependencies
 npm install
