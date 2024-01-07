@@ -1,10 +1,10 @@
-import React, { FC, forwardRef } from 'react';
+import { FC, forwardRef } from 'react';
 
-type Props = {};
+type Props = object;
 
-const CoursesMenu: FC<Props> = forwardRef<HTMLElement, Props>((props, ref) => {
+const CoursesMenu: FC<Props> = forwardRef<HTMLElement, Props>(() => {
   return (
-    <nav ref={ref} className="">
+    <nav  className="">
         <div className='w-[401px] max-w-full grid grid-cols-3 gap-4'>
             <div className="">
                 <p>GENERAL ENGLISH</p>

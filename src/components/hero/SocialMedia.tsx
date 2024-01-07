@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
+import  { FC } from 'react'
 import {  FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa";
 
-type Props = {}
+type Props = object;
 
 const SocialMedia: FC<Props> = () => {
   return (

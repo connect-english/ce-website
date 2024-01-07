@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import  { FC } from 'react'
 import { FaClock } from "react-icons/fa";
 import { HiDocumentText } from "react-icons/hi2";
 

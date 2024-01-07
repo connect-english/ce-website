@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import bookImage from '../../assets/icons/book.png'
 
 

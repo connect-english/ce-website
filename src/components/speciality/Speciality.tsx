@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 import rocketIcon from '../../assets/icons/rocket.png'
 import payment from '../../assets/icons/payment.png'

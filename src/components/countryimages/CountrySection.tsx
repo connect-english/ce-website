@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import sydnyBg from '../../assets/bg/Sydney.jpg'
 
 type Props = object

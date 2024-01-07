@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Hero from '../components/hero/Hero'
 import WhyCw from '../components/whyce/WhyCw'
 import CountrySection from '../components/countryimages/CountrySection'

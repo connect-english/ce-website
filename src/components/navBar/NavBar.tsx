@@ -1,9 +1,10 @@
-import React, { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import ceIcon from "../../assets/icons/connect-english.png"
 import CoursesMenu from './CoursesMenu'
 import { TiThMenu } from "react-icons/ti";
+import { RiLoginCircleFill } from "react-icons/ri";
 
 type Props = object
 
@@ -12,9 +13,11 @@ const NavBar: FC<Props> = () => {
 
     const [hovering, setHovering] = useState<number | null>(null)
     const [popoverLeft, setPopoverLeft] = useState<number | null>(null)
-    const [popoverHeight, setPopoverHeight] = useState<number | null>(null)
+    // const [popoverHeight, setPopoverHeight] = useState<number | null>(null)
     const [courceMenu, setCoseMune] = useState(false)
     const [fade, setFade] = useState(false);
+
+    useEffect(() => {console.log(mobileMenu)},[mobileMenu])
 
     return (
         <nav className=" w-full bg-ce-blue h-[65px] fixed  z-10">
@@ -63,9 +66,9 @@ const NavBar: FC<Props> = () => {
                         </div>
                         <div className='w-full mt-10'>
                             <ul className="p-2 divide-y rounded-t-none bg-ce-pink text-ce-white">
-                                <li className='p-5 cursor-pointer '><a>Home</a></li>
-                                <li className='p-5 cursor-pointer '><a>About Us</a></li>
-                                <li onClick={() => setCoseMune(!courceMenu)} className='p-5 cursor-pointer'>
+                                <li  className='p-5 cursor-pointer '><Link to='/'>Home</Link></li>
+                                <li onClick={() => setMobileMenu(false)} className='p-5 cursor-pointer '><Link to='/about'>About Us</Link></li>
+                                <li onClick={() => setCoseMune(!mobileMenu)} className='p-5 cursor-pointer'>
                                     <div className='flex items-center justify-between w-full'>
 
                                         <a>Courses </a>
@@ -108,14 +111,14 @@ const NavBar: FC<Props> = () => {
                                         )
                                     }
                                 </li>
-                                <li className='p-5 cursor-pointer '><a>Contact Us</a></li>
+                                <li onClick={() => setMobileMenu(false)} className='p-5 cursor-pointer '><a>Contact Us</a></li>
+                                <li onClick={() => setMobileMenu(false)} className='p-5 cursor-pointer flex items-center'><div className='text-3xl'><RiLoginCircleFill /></div><a className='ml-2'>Log In</a></li>
+                                <li onClick={() => setMobileMenu(false)} className='p-5 cursor-pointer bg-ce-blue rounded-lg'><a>Register</a></li>
                             </ul>
                         </div>
                         <div className='w-full mt-10'>
                             <p className='text-base text-center text-ce-white'>Copyright © connect english 2024</p>
                         </div>
-
-
                     </div>
                 )
             }

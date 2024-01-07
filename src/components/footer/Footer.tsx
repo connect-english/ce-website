@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import ceLogo from '../../assets/icons/connect-english.png'
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
