@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # navigate to app folder
-cd /app
+cd /home/app/
 
 # install node and npm
 yum install curl -y
