@@ -12,8 +12,10 @@ const CountrySection: FC<Props> = () => {
                 <div className='absolute top-0 left-0 z-[2] w-full h-full p-5 mb-5'>
                     <div className='flex items-center justify-center w-full h-full'>
                         <div>
-                            <h1 className='text-4xl font-bold text-center text-ce-white'>Why Connect English?</h1>
-                            <p className='text-center text-ce-white'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h1 className='text-4xl font-bold text-center text-ce-white'>Get Started Today!</h1>
+                            <p className='text-center text-ce-white md:text-2xl lg:text-base'>Ready to embark on your English language journey? Enroll now and unlock the doors to improved communication, career opportunities, and cultural connections.
+
+                                Join our online English class community and let's make language learning an exciting and enriching adventure together!</p>
                         </div>
                     </div>
                 </div>

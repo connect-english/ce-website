@@ -9,7 +9,7 @@ function App() {
     //     <Route path='/' element={<Layout />} />
     //   </Routes>
     // </Router>
-    <div>
+    <div className='bg-ce-white'>
       <Layout />
     </div>
   )

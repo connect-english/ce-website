@@ -1,12 +1,14 @@
 import { FC } from 'react'
+
 import ceLogo from '../../assets/icons/connect-english.png'
 import { FaFacebook } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { LuInstagram } from "react-icons/lu";
+import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import ContactUs from './ContactUs';
 
 type Props = object
+
 
 const Footer: FC<Props> = () => {
     return (
@@ -26,11 +28,11 @@ const Footer: FC<Props> = () => {
                                     <a href="#">
                                         <FaFacebook />
                                     </a>
-                                    <a href="#">
-                                        <FaYoutube />
+                                    <a href=" https://www.instagram.com/con_nectenglish ">
+                                        <LuInstagram />
                                     </a>
                                     <a href="">
-                                        <FaTwitter />
+                                        <FaLinkedinIn />
                                     </a>
                                 </div>
                             </div>
@@ -57,7 +59,7 @@ const Footer: FC<Props> = () => {
                         </div>
 
                         <div className='w-full col-span-4 text-white md:col-span-1'>
-                            <p className='mb-5 font-bold text-ls'>Help & Support</p>
+                            {/* <p className='mb-5 font-bold text-ls'>Help & Support</p>
                             <ul>
                                 <li>
                                     <a className='transition duration-150 ease-in-out hover:text-ce-pink' href="#">FAQs</a>
@@ -68,11 +70,11 @@ const Footer: FC<Props> = () => {
                                 <li>
                                     <a className='transition duration-150 ease-in-out hover:text-ce-pink' href="#">Privacy polic</a>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </div>
 
                         <div className='w-full col-span-4 text-white md:col-span-1'>
-                            <p className='mb-5 font-bold text-ls'>Courses</p>
+                            {/* <p className='mb-5 font-bold text-ls'>Courses</p>
                             <ul>
                                 <li>
                                     <a className='transition duration-150 ease-in-out hover:text-ce-pink' href="#">FAQs</a>
@@ -83,12 +85,13 @@ const Footer: FC<Props> = () => {
                                 <li>
                                     <a className='transition duration-150 ease-in-out hover:text-ce-pink' href="#">Privacy polic</a>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </div>
-                <div className='w-full mt-5 divide-y divide-dashed'>
-                    <p className='text-center text-ce-gray'>Copyright © connect english 2024</p>
+                <div className='flex justify-between w-full mt-5 divide-y divide-dashed'>
+                    <p className='w-full text-center text-ce-gray'>Copyright © connect english 2024 <a className='w-56 text-right no-underline text-ce-white' href="https://www.iboxlab.com" target="_blank" rel="noopener">- iBoxLAB Website</a></p>
+                    
                 </div>
             </div>
 
