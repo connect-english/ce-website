@@ -2,7 +2,7 @@ import { FC } from 'react'
 import NavBar from '../components/navBar/NavBar'
 // import Home from '../pages/Home'
 import Footer from '../components/footer/Footer'
-import { Outlet } from 'react-router-dom'
+import { Outlet, ScrollRestoration  } from 'react-router-dom'
 
 type Props = object
 
@@ -12,6 +12,7 @@ const Layout:FC<Props> = () => {
         <NavBar />
           <Outlet />
         <Footer />
+        <ScrollRestoration  />
     </div>
   )
 }

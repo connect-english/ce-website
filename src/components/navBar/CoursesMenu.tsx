@@ -21,7 +21,6 @@ const CoursesMenu: FC<Props> = forwardRef<HTMLElement, Props>(() => {
                     <p>Provided by Connect English Guest Lecture </p>
                     <p>Contact us for more information</p>
                     {/* <p>Coming soon...</p> */}
-
                   </div>
 
                   <div className='mb-5'>

@@ -3,7 +3,7 @@ import { FC } from 'react'
 import ceLogo from '../../assets/icons/connect-english.png'
 import { FaFacebook } from "react-icons/fa";
 import { LuInstagram } from "react-icons/lu";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import ContactUs from './ContactUs';
 
@@ -31,8 +31,8 @@ const Footer: FC<Props> = () => {
                                     <a href=" https://www.instagram.com/con_nectenglish ">
                                         <LuInstagram />
                                     </a>
-                                    <a href="">
-                                        <FaLinkedinIn />
+                                    <a href="#">
+                                        <FaXTwitter />
                                     </a>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ const Footer: FC<Props> = () => {
                     </div>
                 </div>
                 <div className='flex justify-between w-full mt-5 divide-y divide-dashed'>
-                    <p className='w-full text-center text-ce-gray'>Copyright © connect english 2024 <a className='w-56 text-right no-underline text-ce-white' href="https://www.iboxlab.com" target="_blank" rel="noopener">- iBoxLAB Website</a></p>
+                    <p className='w-full text-center text-ce-gray'>Copyright © connect english 2024 </p>
                     
                 </div>
             </div>
