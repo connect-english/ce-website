@@ -14,7 +14,7 @@ const SocialMedia: FC<Props> = () => {
                 <a className='cursor-pointer' href="#">
                     <FaFacebook />
                 </a>
-                <a href=" https://www.instagram.com/con_nectenglish ">
+                <a href=" https://www.instagram.com/con_nectenglish">
                     <LuInstagram />
                 </a>
                 <a href="#">
