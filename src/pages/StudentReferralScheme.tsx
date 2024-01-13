@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from "yup";
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 type Props = object
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
