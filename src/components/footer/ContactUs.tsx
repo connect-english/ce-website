@@ -2,9 +2,12 @@ import { FC } from "react";
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from "yup";
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from "react-toastify";
 
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
+
+import 'react-toastify/dist/ReactToastify.css';
 
 type Props = object;
 
@@ -17,10 +20,9 @@ type Props = object;
 
 const ContactUs: FC<Props> = () => {
 
-  const serviceId = 'service_69w8848'
-  const templateId = 'template_a7p8d7i'
-  const publicKey ='X8MoAnxk4Cf-m9A6g';
-
+  const serviceId = 'service_18yk0s8'
+  const templateId = 'template_wqkd0wn'
+  const publicKey ='Wtu2Xsjk3bCwniBOn';
 
 
   // const [userName, setUserName] = useState("");
@@ -89,10 +91,16 @@ const ContactUs: FC<Props> = () => {
                 
                   emailjs.send(serviceId, templateId, templateParams, publicKey)
                     .then(() => {
-                      console.log("Email sent successfully", publicKey)
+                      toast.success("Email sent successfully", {
+                        position: toast.POSITION.TOP_RIGHT,
+                      });
+                      // notify
                     })
                     .catch((error) => {
                       console.error(`Error sending email: ${error}`)
+                      toast.error(`Error sending email:`, {
+                        position: toast.POSITION.TOP_RIGHT,
+                      });
                     })
                     setSubmitting(false)
                     resetForm()
@@ -156,6 +164,7 @@ const ContactUs: FC<Props> = () => {
         </div>
       </div>
     </div>
+    <ToastContainer />
     </div >
   );
 };

@@ -2,15 +2,16 @@ import { FC } from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from "yup";
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from "react-toastify";
 
 type Props = object
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+import 'react-toastify/dist/ReactToastify.css';
 
 const StudentReferralScheme: FC<Props> = () => {
-  const serviceId = 'service_69w8848'
-  const templateId = 'template_mok62le'
-  const publicKey = 'X8MoAnxk4Cf-m9A6g';
-
+  const templateId = 'template_84a88ht'
+  const serviceId = 'service_18yk0s8'
+  const publicKey ='Wtu2Xsjk3bCwniBOn';
 
   return (
     <div className='w-full mt-[65px] py-5'>
@@ -45,10 +46,15 @@ const StudentReferralScheme: FC<Props> = () => {
 
                 emailjs.send(serviceId, templateId, templateParams, publicKey)
                   .then(() => {
-                    console.log("Email sent successfully", publicKey)
+                    toast.success("Email sent successfully", {
+                      position: toast.POSITION.TOP_RIGHT,
+                    });
                   })
                   .catch((error) => {
                     console.error(`Error sending email: ${error}`)
+                    toast.error(`Error sending email:`, {
+                      position: toast.POSITION.TOP_RIGHT,
+                    });
                   })
                 setSubmitting(false)
                 resetForm()

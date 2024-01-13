@@ -1,5 +1,7 @@
 
 import Layout from './layouts/Layout'
+import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -12,6 +14,7 @@ function App() {
     // </Router>
     <div className='bg-ce-white'>
       <Layout />
+      <ToastContainer />
     </div>
   )
 }
