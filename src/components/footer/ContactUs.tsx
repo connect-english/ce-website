@@ -57,7 +57,7 @@ const ContactUs: FC<Props> = () => {
               <div className="text-3xl text-ce-pink lg:text-base ">
                 <MdEmail />
               </div>
-              <p className="ml-2 text-ce-white md:text-xl lg:text-base ">info@conectenglish.me</p>
+              <p className="ml-2 text-ce-white md:text-xl lg:text-base ">info@connectenglish.me</p>
             </div>
             <div className="flex mt-5">
               <div className="text-3xl lg:text-base text-ce-pink">
